@@ -86,7 +86,7 @@ impl EmojiBuilder for Blobmoji {
     /// and a hash that represents the source SVG
     type PreparedEmoji = (
         PathBuf,
-        Result<GenericArray<u8, <Sha256 as Digest>::OutputSize>, CheckError>
+        Rfirefesult<GenericArray<u8, <Sha256 as Digest>::OutputSize>, CheckError>
     );
 
     fn new(
@@ -574,7 +574,7 @@ impl Blobmoji {
         }
     }
 
-    fn build_font(&self,
+    pub fn build_font(&self,
                   emojis: &HashMap<&Emoji, Result<<Self as EmojiBuilder>::PreparedEmoji, <Self as EmojiBuilder>::Err>>,
                   output_file: &Path,
                   add_cmap_and_glyf: bool
