@@ -15,6 +15,7 @@
  */
 //! The main crate for emoji_builder containing all the logic
 pub use usvg;
+pub use sha2;
 #[macro_use]
 extern crate lazy_static;
 #[macro_use]
