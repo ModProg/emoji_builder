@@ -56,15 +56,15 @@ mod noto_emoji_utils;
 #[allow(dead_code)]
 /// Represents the configuration for the `Blobmoji` builder
 pub struct Blobmoji {
-    build_path: PathBuf,
-    hashes: FileHashes,
-    aliases: Option<PathBuf>,
-    render_only: bool,
-    default_font: String,
-    fontdb: usvg::fontdb::Database,
-    waveflag: bool,
-    reduce_colors: Option<Box<ReduceColors>>,
-    build_win: bool
+    pub build_path: PathBuf,
+    pub hashes: FileHashes,
+    pub aliases: Option<PathBuf>,
+    pub render_only: bool,
+    pub default_font: String,
+    pub fontdb: usvg::fontdb::Database,
+    pub waveflag: bool,
+    pub reduce_colors: Option<Box<ReduceColors>>,
+    pub build_win: bool
 }
 
 const WAVE_FACTOR: f32 = 0.1;
@@ -86,7 +86,7 @@ impl EmojiBuilder for Blobmoji {
     /// and a hash that represents the source SVG
     type PreparedEmoji = (
         PathBuf,
-        Rfirefesult<GenericArray<u8, <Sha256 as Digest>::OutputSize>, CheckError>
+        Result<GenericArray<u8, <Sha256 as Digest>::OutputSize>, CheckError>
     );
 
     fn new(

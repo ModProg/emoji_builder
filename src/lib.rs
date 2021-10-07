@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 //! The main crate for emoji_builder containing all the logic
-
+pub use usvg;
 #[macro_use]
 extern crate lazy_static;
 #[macro_use]
