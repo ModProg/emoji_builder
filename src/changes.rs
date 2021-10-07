@@ -36,7 +36,7 @@ use crate::emoji::Emoji;
 use crate::changes;
 
 /// A simple struct that maps code sequences to file hashes
-pub struct FileHashes(HashMap<Vec<u32>, Vec<u8>>);
+pub struct FileHashes(pub HashMap<Vec<u32>, Vec<u8>>);
 
 #[derive(Debug)]
 /// An error that can occur with change checking
