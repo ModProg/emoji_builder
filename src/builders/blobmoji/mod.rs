@@ -70,7 +70,7 @@ pub struct Blobmoji {
 const WAVE_FACTOR: f32 = 0.1;
 
 const HASHES: &str = "hashes.csv";
-const TMPL_TTX_TMPL: &str = "font.tmpl.ttx.tmpl";
+pub const TMPL_TTX_TMPL: &str = "font.tmpl.ttx.tmpl";
 const TMPL_TTX: &str = "font.tmpl.ttx";
 const TMPL_TTF: &str = "font.tmpl.ttf";
 const TTF: &str = "font.ttf";
@@ -78,7 +78,7 @@ const TTF_WITH_PUA: &str = "font.ttf-with-pua";
 const TTF_WITH_PUA_VARSE1: &str = "font.ttf-with-pua-varse1";
 const PNG_DIR: &str = "png";
 
-const TMPL_TTX_TMPL_CONTENT: &[u8] = include_bytes!("noto-emoji/NotoColorEmoji.tmpl.ttx.tmpl");
+pub const TMPL_TTX_TMPL_CONTENT: &[u8] = include_bytes!("noto-emoji/NotoColorEmoji.tmpl.ttx.tmpl");
 
 impl EmojiBuilder for Blobmoji {
     type Err = BlobmojiError;
