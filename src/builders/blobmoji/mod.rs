@@ -76,7 +76,7 @@ const TMPL_TTF: &str = "font.tmpl.ttf";
 const TTF: &str = "font.ttf";
 const TTF_WITH_PUA: &str = "font.ttf-with-pua";
 const TTF_WITH_PUA_VARSE1: &str = "font.ttf-with-pua-varse1";
-const PNG_DIR: &str = "png";
+pub const PNG_DIR: &str = "png";
 
 pub const TMPL_TTX_TMPL_CONTENT: &[u8] = include_bytes!("noto-emoji/NotoColorEmoji.tmpl.ttx.tmpl");
 
